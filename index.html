@@ -129,810 +129,811 @@
   <body>
     <textarea id="source">
 
-    name: inverse
-    layout: true
-    class: center, middle, inverse
-    ---
+      name: inverse
+      layout: true
+      class: center, middle, inverse
+      ---
 
-    # Risk for Engineers
-    ### Measuring the reduction of "_bad things_" in our future
+      # Риск для инженеров
+      ### Измеряем, как уменьшается количество «_плохих вещей_» в нашем будущем
 
-    ---
+      ---
 
-    ## Problem:
+      ## Проблема:
 
-    --
+      --
 
-    ### I build security things, but I can't measure what difference it made.
+      ### Я делаю штуки для безопасности, но не могу измерить, какую разницу они дают.
 
-    ---
+      ---
 
-    ## Here's a simple way to measure the difference you've made.
+      ## Вот простой способ измерить, какую разницу вы внесли.
 
-    ---
+      ---
 
-    ## Think of what security "thing" you work on.
+      ## Подумайте о той «штуке» в безопасности, над которой вы работаете.
 
-    --
+      --
 
-    ### Now think of a specific scenario that you're hoping it will prevent.
+      ### А теперь подумайте о конкретном сценарии, который вы надеетесь предотвратить.
 
-    ---
+      ---
 
-    ### Think of that scenario with a specific time frame (Days, Months, Years)
+      ### Подумайте об этом сценарии в конкретных временных рамках (дни, месяцы, годы).
 
-    ---
-    name: final
-    layout: true
-    class: left, top, inverse
-    ---
+      ---
+      name: final
+      layout: true
+      class: left, top, inverse
+      ---
 
-    ## Examples:
+      ## Примеры:
 
-    --
+      --
 
-    ### Data is stolen from our production storage buckets this quarter.
+      ### Данные украдены из наших продакшн-бакетов в этом квартале.
 
-    --
+      --
 
-    ### We discover malware on our CEO's laptop this year.
+      ### Мы обнаруживаем малварь на ноутбуке нашего CEO в этом году.
 
-    --
+      --
 
-    ### We are knocked offline because of an incident in the first two weeks after our product launches.
+      ### Из-за инцидента в первые две недели после запуска продукта мы уходим в офлайн.
 
-    ---
-    template: inverse
-    layout: true
-    ---
+      ---
+      template: inverse
+      layout: true
+      ---
 
-    ## Let's measure the likelihood of this scenario occurring.
+      ## Давайте измерим вероятность того, что этот сценарий произойдёт.
 
-    ---
+      ---
 
-    ### We will do this with:
-    ## A forecast.
-    ## 🌩️
+      ### Мы сделаем это с помощью:
+      ## Прогноза.
+      ## 🌩️
 
-    ---
+      ---
 
-    ## 1. Will this occur this year?
+      ## 1. Произойдёт ли это в этом году?
 
-    --
+      --
 
-    ## 2. What are the odds that it will?
+      ## 2. Какие шансы, что произойдёт?
 
-    ---
+      ---
 
-    ## Don't be over concerned with being correct.
-    ### Try your best.
+      ## Не зацикливайтесь на том, чтобы быть «правым».
+      ### Просто постарайтесь.
 
-    --
+      --
 
-    ### In fact, being "correct" might not matter.
+      ### На самом деле, быть «правым» может вообще не иметь значения.
 
-    --
+      --
 
-    ### We will cover that point later.
+      ### К этому мы ещё вернёмся.
 
-    ---
+      ---
 
-    ## Here's an example scenario.
+      ## Вот пример сценария.
 
-    ---
-    ## Scenario:
-    ### We are knocked offline because of an incident in the next year.
-    ---
-    ## Your forecast:
-    ### There is a .red[33% chance] that this will happen.
+      ---
+      ## Сценарий:
+      ### Из-за инцидента в следующем году мы уходим в офлайн.
+      ---
+      ## Ваш прогноз:
+      ### Есть .red[33% шанс], что это произойдёт.
 
-    --
+      --
 
-    ##### (Yikes)
+      ##### (Ой-ой)
 
-    ---
+      ---
 
-    ## Great! You've begun measurement.
+      ## Отлично! Вы начали измерять.
 
-    --
+      --
 
-    ## Now go back to work!
+      ## А теперь обратно к работе!
 
-    ---
+      --- 
 
-    ### Try to fix it, or do whatever it is you do as a _security professional_.
+      ### Попытайтесь это исправить — или делайте то, чем вы вообще занимаетесь как _специалист по безопасности_.
 
-    ---
+      ---
 
-    ### When you're done with your work mitigating something, measure again.
+      ### Когда закончите со своей работой по митигации — измерьте ещё раз.
 
-    ---
-    ## Scenario:
-    ### We are knocked offline because of an incident in the next year.
+      ---
+      ## Сценарий:
+      ### Из-за инцидента в следующем году мы уходим в офлайн.
 
-    --
+      --
 
-    ### Now consider your work: (_"And now we have implemented DDoS protection."_)
-    ---
-    ## Your forecast:
-    ### There is a .red[29% chance] (.green[-4%] reduction) that this will happen.
+      ### А теперь учтите вашу работу: (_«А теперь мы внедрили защиту от DDoS»._)
+      ---
+      ## Ваш прогноз:
+      ### Есть .red[29% шанс] (снижение на .green[-4%]), что это произойдёт.
 
-    --
+      --
 
-    ### (Remember, your last forecast was .red[33%]!)
+      ### (Помните, в прошлый раз было .red[33%]!)
 
-    ---
+      ---
 
-    ### You're done.
+      ### Готово.
 
-    ---
+      ---
 
-    ### You measured a .green[4%] reduction of the probability associated with this risk.
+      ### Вы измерили снижение вероятности этого риска на .green[4%].
 
-    ---
+      ---
 
-    ### You might be asking yourself...
+      ### Возможно, вы спросите себя…
 
-    --
+      --
 
-    ## That was too easy.
+      ## Это было слишком просто.
 
-    ---
+      ---
 
-    ### You would be right. This was an estimation without _rigor_.
+      ### И вы будете правы. Это была оценка без _строгости_.
 
 
-    ---
+      ---
 
-    ## This forecast has lots of problems.
+      ## У этого прогноза куча проблем.
 
-    ---
+      ---
 
-    ### But now you understand the method.
+      ### Но теперь вы понимаете метод.
 
-    ---
+      ---
 
-    ## Now, let's make it more credible.
+      ## Теперь давайте сделаем его более достоверным.
 
-    --
+      --
 
-    ### We can add several layers of rigor to this forecast.
+      ### Мы можем добавить к этому прогнозу несколько уровней строгости.
 
-    --
+      --
 
-    ### This makes forecast metrics very useful and collaborative.
+      ### Это делает прогнозные метрики очень полезными и удобными для совместной работы.
 
-    ---
-    template: final
-    layout: false
-    ## First: What is wrong?
+      ---
+      template: final
+      layout: false
+      ## Сначала: что не так?
 
-    --
+      --
 
-    ### People are highly biased with guesses. [Research](https://machinelearnings.co/why-are-we-so-confident-2c3151a6d5d0) agrees.
+      ### Когда люди гадают, у них куча смещений. [Исследования](https://machinelearnings.co/why-are-we-so-confident-2c3151a6d5d0) с этим согласны.
 
-    --
+      --
 
-    ### A [decade of research](https://www.amazon.com/Expert-Political-Judgment-Good-Know/dp/0691128715) shows experts to be hilariously weak at predictions.
+      ### [Десятилетие исследований](https://www.amazon.com/Expert-Political-Judgment-Good-Know/dp/0691128715) показывает, что эксперты до смешного слабы в прогнозах.
 
-    --
+      --
 
-    ### Risk involves the probability of future events.
+      ### Риск связан с вероятностью будущих событий.
 
-    --
+      --
 
-    ### As "experts", we tend to be .red[worse] at predicting risks.
+      ### Как «эксперты», мы обычно .red[хуже] предсказываем риски.
 
-    --
+      --
 
-    ### This fact is based on Nobel prize winning research.
+      ### Этот факт основан на исследованиях, удостоенных Нобелевской премии.
 
-    --
+      --
 
-    ### These studies are repeated with [humorous results](https://en.wikipedia.org/wiki/Thinking,_Fast_and_Slow) in supporting research.
+      ### Эти исследования воспроизводятся с [забавными результатами](https://en.wikipedia.org/wiki/Thinking,_Fast_and_Slow) в подтверждающих работах.
 
-    ---
-    template: inverse
-    layout: true
-    ---
+      ---
+      template: inverse
+      layout: true
+      ---
 
-    ### This may be one of the reasons we are so bad at preventing breaches.
+      ### Возможно, это одна из причин, почему мы так плохо предотвращаем взломы.
 
-    ---
+      ---
 
-    ### Risk is inherently a probabilistic subject that demands prediction.
+      ### Риск по своей природе — это вероятностная тема, требующая предсказания.
 
-    --
+      --
 
-    ### But these findings show that estimation of risk can be unreliable.
+      ### Но эти выводы показывают, что оценка риска может быть ненадёжной.
 
-    ---
+      ---
 
-    ### Yet, we intend to reduce risks. We _depend_ on our ability to understand risk.
+      ### И всё же мы намерены снижать риски. Мы _зависим_ от своей способности понимать риск.
 
-    ---
+      ---
 
-    ### So we are left as experts with a need to predict risk...
+      ### Так что мы остаёмся экспертами с необходимостью предсказывать риск…
 
-    --
+      --
 
-    ### and science that suggests that [expert predictions are problematic](https://www.sas.upenn.edu/tetlock/publications).
+      ### …и наукой, которая намекает: [с предсказаниями экспертов есть проблемы](https://www.sas.upenn.edu/tetlock/publications).
 
-    ---
+      ---
 
-    ## This issue is rampant in our industry.
+      ## Эта проблема широко распространена в нашей индустрии.
 
-    ---
+      ---
 
-    ### But there's hope!
+      ### Но есть надежда!
 
-    ---
+      ---
 
-    ## Other research suggests methods that _improve_ forecasting.
+      ## Другие исследования предлагают методы, которые _улучшают_ прогнозирование.
 
-    ---
+      ---
 
-    ### Forecasting can be a rigorous process that defends against these errors.
+      ### Прогнозирование может быть строгим процессом, который защищает от этих ошибок.
 
-    ---
+      ---
 
-    ## High risk industries rely on probabilistic approaches to risk.
+      ## Индустрии с высоким риском полагаются на вероятностные подходы к риску.
 
-    --
+      --
 
-    ### [Space](https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/20120001369.pdf), [Nuclear](https://www.nrc.gov/about-nrc/regulatory/risk-informed/pra.html), [Oil](https://www.bsee.gov/sites/bsee.gov/files/interagency-agreements-mous-moas//nasa-bsee-iaa-1-28-16.pdf), [Environmental](https://www.epa.gov/risk/policy-use-probabilistic-analysis-risk-assessment-epa)
+      ### [Космос](https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/20120001369.pdf), [ядерная энергетика](https://www.nrc.gov/about-nrc/regulatory/risk-informed/pra.html), [нефть](https://www.bsee.gov/sites/bsee.gov/files/interagency-agreements-mous-moas//nasa-bsee-iaa-1-28-16.pdf), [экология](https://www.epa.gov/risk/policy-use-probabilistic-analysis-risk-assessment-epa)
 
-    --
+      --
 
-    ### For some reason, we haven't appreciated these methods as they have.
+      ### Почему-то у нас эти методы так не ценят.
 
-    ---
+      ---
 
-    ## Forecasting fills in the gaps where "_We don't have data!_"
+      ## Прогнозирование заполняет пробелы там, где «_У нас нет данных!_»
 
-    --
+      --
 
-    ### It turns out, this is not a valid excuse in any other industry.
+      ### Оказывается, в любой другой индустрии это не считается уважительной причиной.
 
-    ---
+      ---
 
-    ## It's easy to mimic the habits of [effective forecasters](https://www.amazon.com/Superforecasting-Science-Prediction-Philip-Tetlock-ebook/dp/B00RKO6MS8).
+      ## Перенять привычки [эффективных прогнозистов](https://www.amazon.com/Superforecasting-Science-Prediction-Philip-Tetlock-ebook/dp/B00RKO6MS8) несложно.
 
-    --
+      --
 
-    ### They exist! They have been studied vigorously. For decades.
+      ### Они существуют! Их активно изучают. Десятилетиями.
 
-    ---
+      ---
 
-    ## These methods are easy to copy, with measurable results.
+      ## Эти методы легко перенять, и у них есть измеримый результат.
 
-    ---
+      ---
 
-    ### This means rigorous forecasts can be useful enough for decisions about risk.
+      ### Это значит, что строгие прогнозы могут быть достаточно полезны для решений о риске.
 
-    --
+      --
 
-    ### That .green[4%] value could be a reliable piece of data...
+      ### Те .green[4%] могут оказаться надёжной величиной…
 
-    --
+      --
 
-    ### ...instead of feeling like a disposable guess.
+      ### …а не ощущаться одноразовой догадкой.
 
-    ---
+      ---
 
-    # How do we fix our forecast?
+      # Как нам исправить наш прогноз?
 
-    ---
+      ---
 
-    ### The forecast needs _discipline_ to increase the value of the _forecaster_.
+      ### Прогнозу нужна _дисциплина_, чтобы повысить ценность _прогнозиста_.
 
-    ---
+      ---
 
-    ### Let's build that process.
+      ### Давайте построим этот процесс.
 
-    ---
+      ---
 
-    ## First, let's pick good scenarios.
+      ## Во-первых, выберем хорошие сценарии.
 
-    ---
+      ---
 
-    # An employee is infected with malware.
-    ### 💻️
+      # Сотрудник заражён малварью.
+      ### 💻️
 
-    ---
+      ---
 
-    ## First:
-    ### It's not specific enough to forecast. Let's time box it to "this quarter".
+      ## Сначала:
+      ### Это недостаточно конкретно, чтобы делать прогноз. Давайте ограничим временем — «в этом квартале».
 
-    ---
+      ---
 
-    ## _An employee is infected with malware..._
+      ## _Сотрудник заражён малварью…_
 
-    --
+      --
 
-    # This quarter.
+      # В этом квартале.
 
-    ---
+      ---
 
-    ### Add specific threats, vector, asset, as makes sense.
+      ### Добавьте конкретные угрозы, вектор, актив — если это уместно.
 
-    ---
+      ---
 
-    ## _An employee is infected with malware this quarter_
+      ## _Сотрудник заражён малварью в этом квартале_
 
-    --
+      --
 
-    ### How about...
+      ### А как насчёт…
 
-    ---
+      ---
 
-    ## A _C-Level executive_ is infected with malware this quarter.
+      ## _Топ-руководитель_ заражён малварью в этом квартале.
 
-    ---
+      ---
 
-    ### This could be easier to actually measure.
+      ### Это уже легче по-настоящему измерить.
 
-    ---
-    ### More examples:
+      ---
+      ### Ещё примеры:
 
-    ---
-    ## A C-Level executive is infected with malware in the next quarter.
-    ---
-    ## An employee is infected by an email attachment, resulting in a .red[SEV1] incident this year.
-    ---
-    ## Compromised employees are discovered with malware as a result of next week's C&C hunt.
-    ---
+      ---
+      ## Топ-руководитель заражён малварью в следующем квартале.
+      ---
+      ## Сотрудник заражён вложением в почте, что приводит к инциденту .red[SEV1] в этом году.
+      ---
+      ## По итогам охоты на C&C на следующей неделе обнаружены скомпрометированные сотрудники с малварью.
+      ---
 
-    ### These are better, but they don't have to be perfect.
+      ### Так лучше, но они не обязаны быть идеальными.
 
-    --
+      --
 
-    ### Picking a good scenario is a lot like agreeing on a problem.
+      ### Выбрать хороший сценарий — это во многом как договориться о том, в чём проблема.
 
-    --
+      --
 
-    ## Nearly any future event can be forecasted.
+      ## Почти любое будущее событие можно прогнозировать.
 
-    ---
+      ---
 
-    ### So long as it is concrete.
+      ### Лишь бы оно было конкретным.
 
-    ---
+      ---
 
-    ## Second: Gather supporting data.
+      ## Во-вторых: соберите подкрепляющие данные.
 
-    ### Good scenarios can [break down](https://en.wikipedia.org/wiki/Fermi_problem) into data that resembles our problem.
+      ### Хорошие сценарии можно [разложить](https://en.wikipedia.org/wiki/Fermi_problem) на данные, похожие на нашу задачу.
 
-    ---
+      ---
 
-    ## A forecast improves with any "nearby" data.
-    --
+      ## Прогноз становится лучше от любых «соседних» данных.
+      --
 
-    ###  Even just a _little bit_ helps. You might not have any. That's OK too.
+      ### Помогает даже _немножко_. У вас их может и не быть. Это тоже нормально.
 
-    ---
+      ---
 
-    ## Consider a weather forecast.
+      ## Подумайте о прогнозе погоды.
 
-    --
+      --
 
-    ### Will it storm at our warehouse next week?
+      ### Будет ли гроза у нашего склада на следующей неделе?
 
-    ---
+      ---
 
-    ## A good scenario will attract measurement.
+      ## Хороший сценарий притягивает измерения.
 
-    --
+      --
 
-    ### We would invest in radar, barometers, balloons, and sensors in nearby areas to reduce the uncertainty of a forecast.
+      ### Мы бы вложились в радар, барометры, шары и датчики в соседних районах, чтобы снизить неопределённость прогноза.
 
-    ---
+      ---
 
-    ### None of these _detect_ a future storm.
+      ### Ничто из этого не _обнаруживает_ будущую грозу.
 
-    --
+      --
 
-    ### Every day, we still rely on a forecast.
+      ### Каждый день мы всё равно полагаемся на прогноз.
 
-    --
+      --
 
-    ### This data merely supports a forecast.
+      ### Эти данные просто _поддерживают_ прогноз.
 
-    --
+      --
 
-    ## It supports a _forecaster_ because the _forecaster_ wants it.
+      ## Они поддерживают _прогнозиста_, потому что _прогнозисту_ это нужно.
 
-    ---
+      ---
 
-    ### And if we didn't have those sensors, we'd still need a forecast anyway.
+      ### А если бы этих датчиков не было, прогноз нам всё равно бы понадобился.
 
-    ---
+      ---
 
-    ### A [lack](http://www.sciencemag.org/news/2018/05/cooling-failure-threatens-noaa-s-newest-weather-satellite) [of](http://theconversation.com/how-a-lack-of-access-to-reliable-weather-data-is-hurting-african-farmers-80011) [data](https://www.gao.gov/highrisk/mitigating_gaps_in_weather_satellite_data/why_did_study) does not give a weather person the day off.
+      ### [Отсутствие](http://www.sciencemag.org/news/2018/05/cooling-failure-threatens-noaa-s-newest-weather-satellite) [нужных](http://theconversation.com/how-a-lack-of-access-to-reliable-weather-data-is-hurting-african-farmers-80011) [данных](https://www.gao.gov/highrisk/mitigating_gaps_in_weather_satellite_data/why_did_study) не освобождает синоптика от работы.
 
-    ---
+      ---
 
-    ## We _have_ to express uncertainty
+      ## Мы _обязаны_ выражать неопределённость —
 
-    ## whether the data we want exists or not.
+      ## есть нужные нам данные или нет.
 
-    ---
+      ---
 
-    ## Moving on... 
+      ## Едем дальше…
 
-    ---
+      ---
 
-    ## Forecasting helps us become _less wrong_ over time.
+      ## Прогнозирование помогает нам со временем становиться _менее неправыми_.
 
-    ---
+      ---
 
-    ## In fact, every forecast is wrong!
+      ## На самом деле — каждый прогноз неверен!
 
-    --
+      --
 
-    ### We just want to be as _less wrong_ as possible.
+      ### Мы просто хотим быть _настолько менее неправыми_, насколько это возможно.
 
-    ---
+      ---
 
-    ## Third: Train yourself, the forecaster.
+      ## В-третьих: тренируйте себя, прогнозиста.
 
-    --
+      --
 
-    ### Let's calibrate your sense of certainty.
+      ### Давайте откалибруем ваше чувство уверенности.
 
-    --
+      --
 
-    ### You're going to get better at representing your certainty *as a number*.
+      ### Вы научитесь лучше выражать свою уверенность *числом*.
 
-    ---
-    
-    ## Instead of saying...
+      ---
 
-    --
-    
-    ### We're _hella_ breached right now dawg 🤣
+      ## Вместо того чтобы говорить…
 
-    --
-    
-    ## We can learn to say something like...
+      --
 
-    ---
-    
-    ## There is a .red[%47] chance we'll discover an intrusion from a week long hunt in production.
+      ### Нас тут _капец_ как взломали, чувак 🤣
 
-    ---
+      --
 
+      ## Можно научиться говорить что-то вроде…
 
-    ### This greatly reduces problems with forecasting bias.
+      ---
 
-    ---
+      ## Есть .red[%47] шанс, что недельная охота в продакшне обнаружит проникновение.
 
-    ### It helps us avoid overconfidence.
+      ---
 
-    ---
 
-    ### It gives us the chance be _wrong_.
+      ### Это сильно снижает проблемы со смещениями в прогнозах.
 
-    ---
+      ---
 
-    ## It let's us discuss forecasts with others on common terms.
+      ### Это помогает избегать самоуверенности.
 
-    --
+      ---
 
-    ### Like this...
+      ### Это даёт нам шанс _ошибиться_.
 
-    ---
+      ---
 
-    #### 👦: _Hey... Why was your forecast so high? I said .green[%12]._
+      ## Это позволяет обсуждать прогнозы с другими на общем языке.
 
-    --
+      --
 
-    #### 👧: _You know about the current misconfig right? I won't go lower than .red[47%]._
+      ### Вот так…
 
-    --
+      ---
 
-    #### 👦: _Oh. Yeah, you're right. I will increase my forecast._
+      #### 👦: _Слушай… А чего у тебя прогноз такой высокий? Я поставил .green[%12]._
 
-    ---
+      --
 
-    ## Probabilistic forecasting can be learned _VERY QUICKLY_.
+      #### 👧: _Ты в курсе про нынешний мисконфиг? Ниже .red[47%] я не пойду._
 
-    ---
-    ### You can quickly improve your own skills [here](http://confidence.success-equation.com), or [here](http://sethrylan.org/bayesian/calibrate.html).
-    .footnote[A paid version is [here](https://good-judgment.thinkific.com/courses/Superforecasting-Fundamentals)]
-    ---
+      --
 
-    ## That training isn't really that hard.
-    ### [Recent studies](https://hbr.org/2016/05/superforecasting-how-to-upgrade-your-companys-judgment) show that minimal training will drastically improve forecasting abilities.
-    ---
-    ## Did you practice?
-    ---
-    ## Cool!
+      #### 👦: _А, точно. Ты права. Подниму свой прогноз._
 
-    --
+      ---
 
-    ###  Your forecasts are now more reliable.
-    ---
-    ## We can improve forecasts even *more*.
-    ---
-    ## Fourth: We introduce a panel of forecasters.
-    ### <i class="fa fa-user" aria-hidden="true"></i> <i class="fa fa-user" aria-hidden="true"></i> <i class="fa fa-user" aria-hidden="true"></i> <i class="fa fa-user" aria-hidden="true"></i> <i class="fa fa-user" aria-hidden="true"></i>
-    ---
-    ## Diverse panels of forecasters reduce bias from a forecast.
-    ### You'd grab some friends, co-workers, experts, etc. Diverse is better.
-    ---
-    ## Then, we'd calibrate them, too.
-    ###<i class="fa fa-user" aria-hidden="true"></i> <i class="fa fa-user" aria-hidden="true"></i> <i class="fa fa-user" aria-hidden="true"></i> <i class="fa fa-user" aria-hidden="true"></i> <i class="fa fa-user" aria-hidden="true"></i>
+      ## Вероятностному прогнозированию можно научиться _ОЧЕНЬ БЫСТРО_.
 
-    --
+      ---
+      ### Можно быстро прокачать свои навыки [здесь](http://confidence.success-equation.com) или [здесь](http://sethrylan.org/bayesian/calibrate.html).
+      .footnote[Платная версия — [здесь](https://good-judgment.thinkific.com/courses/Superforecasting-Fundamentals)]
+      ---
 
-    ### Now we can average multiple forecasts into a single forecast:
+      ## Тренировка не такая уж и сложная.
+      ### [Недавние исследования](https://hbr.org/2016/05/superforecasting-how-to-upgrade-your-companys-judgment) показывают, что минимальная тренировка радикально улучшает способности к прогнозированию.
+      ---
+      ## Потренировались?
+      ---
+      ## Круто!
 
-    --
+      --
 
-    ### <i class="fa fa-user" aria-hidden="true"></i>
+      ###  Теперь ваши прогнозы надёжнее.
+      ---
+      ## Прогнозы можно улучшить *ещё* сильнее.
+      ---
+      ## В-четвёртых: собираем группу прогнозистов.
+      ### <i class="fa fa-user" aria-hidden="true"></i> <i class="fa fa-user" aria-hidden="true"></i> <i class="fa fa-user" aria-hidden="true"></i> <i class="fa fa-user" aria-hidden="true"></i> <i class="fa fa-user" aria-hidden="true"></i>
+      ---
+      ## Разнородные группы прогнозистов снижают смещение в прогнозе.
+      ### Берёте друзей, коллег, экспертов и т. д. Чем разнообразнее — тем лучше.
+      ---
+      ## Затем мы их тоже калибруем.
+      ###<i class="fa fa-user" aria-hidden="true"></i> <i class="fa fa-user" aria-hidden="true"></i> <i class="fa fa-user" aria-hidden="true"></i> <i class="fa fa-user" aria-hidden="true"></i> <i class="fa fa-user" aria-hidden="true"></i>
 
-    --
+      --
 
-    ### And this number represents a consensus based estimate.
+      ### И теперь можно усреднить несколько прогнозов в один:
 
-    ---
+      --
 
-    ### This number is more stable and more resistant to individual bias.
+      ### <i class="fa fa-user" aria-hidden="true"></i>
 
-    ---
-    ### Groups seem to benefit greatly from combined forecasts.
-    ---
-    ## A fun example.
+      --
 
-    --
+      ### И это число — консенсусная оценка.
 
-    ### In 1907, a group of 787 people [correctly guessed the weight of an ox](https://arxiv.org/pdf/1410.3989.pdf).
+      ---
 
-    --
+      ### Такое число стабильнее и устойчивее к индивидуальным смещениям.
 
-    .footnote[see [The Wisdom of Crowds](https://en.wikipedia.org/wiki/The_Wisdom_of_Crowds)]
+      ---
+      ### Группы, похоже, сильно выигрывают от объединённых прогнозов.
+      ---
+      ## Забавный пример.
 
+      --
 
-    ---
+      ### В 1907 году группа из 787 человек [правильно угадала вес быка](https://arxiv.org/pdf/1410.3989.pdf).
 
-    ## A recent example.
+      --
 
-    --
+      .footnote[см. [«Мудрость толпы»](https://en.wikipedia.org/wiki/The_Wisdom_of_Crowds)]
 
-    ### This method was used to create [teams of civilians](https://www.npr.org/sections/parallels/2014/04/02/297839429/-so-you-think-youre-smarter-than-a-cia-agent)...
 
-    --
+      ---
 
-    ### ...who .red[beat] national security intelligence analysts...
+      ## Более свежий пример.
 
-    --
+      --
 
-    ###...who had access to .red[confidential data].
+      ### Этот метод использовали, чтобы собрать [команды из обычных гражданских](https://www.npr.org/sections/parallels/2014/04/02/297839429/-so-you-think-youre-smarter-than-a-cia-agent)…
 
-    ---
+      --
 
-    ### So, where are we?
+      ### …которые .red[обошли] аналитиков национальной разведки…
 
-    --
+      --
 
-    ## Lets summarize.
+      ###…у которых был доступ к .red[засекреченным данным].
 
-    ---
+      ---
 
-    name: final
-    layout: true
-    class: left, top, inverse
+      ### Итак, где мы?
 
-    ---
+      --
 
-    # We have forecasting tools.
+      ## Подведём итог.
 
-    --
+      ---
 
-    ### Forecasts are improved with specific, time boxed scenarios.
+      name: final
+      layout: true
+      class: left, top, inverse
 
-    --
+      ---
 
-    ### Groups of diverse expert forecasts can smoothen out bias, like FUD and overconfidence.
+      # У нас есть инструменты прогнозирования.
 
-    --
+      --
 
-    ### We can be trained to calibrate ourselves. [Quickly](http://journal.sjdm.org/16/16511/jdm16511.pdf).
+      ### Прогнозы становятся лучше с конкретными, ограниченными по времени сценариями.
 
-    --
+      --
 
-    ### So...
+      ### Разнородные группы экспертов сглаживают смещения — типа FUD и самоуверенности.
 
-    --
+      --
 
-    ## We can create high value, rigorous forecasts about the probability of a risk.
+      ### Нас можно научить самокалибровке. [Быстро](http://journal.sjdm.org/16/16511/jdm16511.pdf).
 
-    ---
-    template: inverse
-    layout: true
-    ---
+      --
 
-    ## We're still not done.
+      ### Итак…
 
-    --
+      --
 
-    ### This is *still not useful*.
+      ## Мы можем создавать ценные, строгие прогнозы вероятности риска.
 
-    --
+      ---
+      template: inverse
+      layout: true
+      ---
 
-    ### We haven't measured that what you are working on _is valuable_
+      ## Но мы ещё не закончили.
 
-    --
+      --
 
-    ## We'll get there!
+      ### Это *всё ещё бесполезно*.
 
-    ---
+      --
 
-    ### To understand how we measure risk, we first need to acknowledge how little we know about risk.
+      ### Мы не измерили, _имеет ли ценность_ то, над чем вы работаете.
 
-    ---
+      --
 
-    ### Who says we can always predict the future?
+      ## Мы до этого дойдём!
 
-    ---
+      ---
 
-    ### We can't, really.
+      ### Чтобы понять, как мы измеряем риск, сначала надо признать, как мало мы знаем о риске.
 
-    ---
+      ---
 
-    ### Things that haven't happened yet can't be measured.
+      ### Кто сказал, что мы всегда можем предсказать будущее?
 
-    ---
+      ---
 
-    ## Probability is just a way of expressing belief.
+      ### Если честно — не можем.
 
-    ---
+      ---
 
-    ## We are not omniscient.
+      ### То, что ещё не случилось, нельзя измерить.
 
-    ---
+      ---
 
-    ### With these methods...
+      ## Вероятность — это просто способ выразить убеждение.
 
-    --
+      ---
 
-    ## we're not pretending that we are predicting the future.
+      ## Мы не всезнающие.
 
-    ---
+      ---
 
-    ### Instead, we are measuring _what we know_.
+      ### С этими методами…
 
-    ---
+      --
 
-    ## We want to become _less wrong_. 
+      ## …мы не делаем вид, что предсказываем будущее.
 
-    --
+      ---
 
-    ### So, we must measure how wrong we are.
+      ### Вместо этого мы измеряем _то, что знаем_.
 
-    --
+      ---
 
-    ## Let's do that.
+      ## Мы хотим становиться _менее неправыми_.
 
-    ---
+      --
 
-    ## Let's measure your work.
+      ### Значит, нам нужно измерять, насколько мы неправы.
 
-    --
+      --
 
-    ### Assume you are improving the security of your AWS infrastructure.
+      ## Давайте этим и займёмся.
 
-    --
+      ---
 
-    ### Let's run forecasts every quarter while we mitigate this risk.
+      ## Измерим вашу работу.
 
-    ---
-    template: final
-    layout: true
-    ---
+      --
 
-    ##Scenario: _"An attacker accesses destructive AWS IAM permissions in the next 365 days."_
+      ### Допустим, вы улучшаете безопасность своей инфраструктуры в AWS.
 
-    --
-    #### 2016 - Q3: .red[25%]
-    First forecast. We already know our infra is a dumpster fire.
-    --
+      --
 
-    #### 2016 - Q4: .red[23%]
-    Minor progress. We have limited the destructive capability of keys in production.
-    --
+      ### Будем делать прогнозы каждый квартал, пока митигируем этот риск.
 
-    #### 2017 - Q1: .red[16%]
-    We added multifactor protection to keys used by engineers.
-    --
+      ---
+      template: final
+      layout: true
+      ---
 
-    #### 2017 - Q2: .green[10%]
-    We took keys out of source code and use roles now.
-    --
+      ##Сценарий: _«Атакующий получает деструктивные разрешения IAM в AWS в ближайшие 365 дней»._
 
-    ## An increase in confidence against this risk of .green[15%].
+      --
+      #### 2016 — Q3: .red[25%]
+      Первый прогноз. Мы уже знаем, что у нас в инфре всё горит синим пламенем.
+      --
 
-    ---
+      #### 2016 — Q4: .red[23%]
+      Небольшой прогресс. Мы ограничили деструктивные возможности ключей в продакшене.
+      --
 
-    ## The direction of forecasts matter.
+      #### 2017 — Q1: .red[16%]
+      Мы добавили мультифакторную защиту на ключи, которыми пользуются инженеры.
+      --
 
-    --
+      #### 2017 — Q2: .green[10%]
+      Мы убрали ключи из исходного кода и теперь используем роли.
+      --
 
-    ### We can't just fudge numbers. The threat of being _very wrong_ matters too.
+      ## Уверенности в защите от этого риска прибавилось на .green[15%].
 
-    --
+      ---
 
-    ## If our efforts mitigate risk... 
-    
-    --
-    
-    ### We should also believe we influenced the odds.
+      ## Направление прогнозов важно.
 
-    --
+      --
 
-    ## In the event that _we end up being wrong_...
-    
-    ---
-    template: inverse
-    layout: true
-    ---
-    
-    ## We are on the hook.
+      ### Мы не можем просто подкручивать числа. Угроза _сильно ошибиться_ тоже имеет значение.
 
-    --
+      --
 
-    ### We re-evaluate the facts.
+      ## Если наши усилия снижают риск…
 
-    --
+      --
 
-    ### We surface opinions of people who held opposing views.
+      ### …мы также должны верить, что повлияли на шансы.
 
-    --
+      --
 
-    ### We share retrospectives and learn our lessons.
+      ## В случае, если _мы окажемся неправы_…
 
-    ---
+      ---
+      template: inverse
+      layout: true
+      ---
 
-    ## There is opportunity with these methods.
+      ## …спрос с нас.
 
-    ---
-    template: inverse
-    layout: true
+      --
 
-    ---
+      ### Мы переоцениваем факты.
 
-    ## We can measure that we're getting better at security.
+      --
 
-    ---
+      ### Мы выслушиваем тех, кто держался противоположной точки зрения.
 
-    ### I hope I've encouraged you to explore forecasting.
+      --
 
-    ---
+      ### Делимся ретроспективами и извлекаем уроки.
 
-    ### It is not a silver bullet.
+      ---
 
-    ---
+      ## У этих методов есть потенциал.
 
-    ## It is a rarely discussed topic in security.
+      ---
+      template: inverse
+      layout: true
 
-    --
+      ---
 
-    ### Which is surprising, as we are entirely focused on avoiding future events.
+      ## Мы можем измерить, что у нас лучше получается с безопасностью.
 
-    ---
+      ---
 
-    ### Forecasting demands better data, collaboration, and well scoped problems.
+      ### Надеюсь, мне удалось пробудить у вас интерес к прогнозированию.
 
-    ---
+      ---
 
-    ### I believe that forecasting practices will make things better.
+      ### Это не панацея.
 
-    ---
+      ---
 
-    ## Good luck!
+      ## Это редко обсуждаемая тема в безопасности.
 
-    .footnote[Read more:  [Risk Measurement](https://magoo.github.io/risk-measurement/) and [scrty.io](https://scrty.io)]
+      --
+
+      ### Что удивительно — ведь мы целиком сфокусированы на избегании будущих событий.
+
+      ---
+
+      ### Прогнозирование требует более качественных данных, совместной работы и чётко поставленных задач.
+
+      ---
+
+      ### Я верю, что подходы к прогнозированию сделают мир лучше.
+
+      ---
+
+      ## Удачи!
+
+      .footnote[Читайте дальше:  [Risk Measurement](https://magoo.github.io/risk-measurement/) и [scrty.io](https://scrty.io)]
+
 
     </textarea>
         <script src="https://remarkjs.com/downloads/remark-latest.min.js">
