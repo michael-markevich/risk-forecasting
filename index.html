@@ -1,0 +1,963 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="keywords" content="remark,remarkjs,markdown,slideshow,presentation" />
+    <meta name="description" content="A simple, in-browser, markdown-driven slideshow tool." />
+    <title>Risk Forecasting</title>
+    <link rel="stylesheet" href="./font-awesome/css/font-awesome.min.css">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif);
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body {
+        font-family: 'Droid Serif';
+      }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: 400;
+        margin-bottom: 0;
+      }
+      .remark-slide-content h1 { font-size: 3em; }
+      .remark-slide-content h2 { font-size: 2em; }
+      .remark-slide-content h3 { font-size: 1.6em; }
+      .footnote {
+        position: absolute;
+        bottom: 3em;
+      }
+      li p { line-height: 1.25em; }
+      .red { color: #fa0000; }
+      .green { color: green}
+      .large { font-size: 2em; }
+      a, a > code {
+        color: #c0c8d3;
+        text-decoration: underline;
+      }
+      code {
+        background: #e7e8e2;
+        border-radius: 5px;
+      }
+      em {
+        font-style: italic;
+        filter: brightness(120%);
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+      .remark-code-line-highlighted     { background-color: #373832; }
+      .pull-left {
+        float: left;
+        width: 47%;
+      }
+      .pull-right {
+        float: right;
+        width: 47%;
+      }
+      .pull-right ~ p {
+        clear: both;
+      }
+      #slideshow .slide .content code {
+        font-size: 0.8em;
+      }
+      #slideshow .slide .content pre code {
+        font-size: 0.9em;
+        padding: 15px;
+      }
+      .inverse {
+        background: #242424;
+        color: #9e9e9e;
+        text-shadow: 0 0 20px #333;
+      }
+      .inverse h1, .inverse h2 {
+        color: #f3f3f3;
+        line-height: 1em;
+      }
+
+
+      /* Slide-specific styling */
+      #slide-inverse .footnote {
+        bottom: 12px;
+        left: 20px;
+      }
+      #slide-how .slides {
+        font-size: 0.9em;
+        position: absolute;
+        top:  151px;
+        right: 140px;
+      }
+      #slide-how .slides h3 {
+        margin-top: 0.2em;
+      }
+      #slide-how .slides .first, #slide-how .slides .second {
+        padding: 1px 20px;
+        height: 90px;
+        width: 120px;
+        -moz-box-shadow: 0 0 10px #777;
+        -webkit-box-shadow: 0 0 10px #777;
+        box-shadow: 0 0 10px #777;
+      }
+      #slide-how .slides .first {
+        background: #fff;
+        position: absolute;
+        top: 20%;
+        left: 20%;
+        z-index: 1;
+      }
+      #slide-how .slides .second {
+        position: relative;
+        background: #fff;
+        z-index: 0;
+      }
+
+      /* Two-column layout */
+      .left-column {
+        color: #777;
+        width: 20%;
+        height: 92%;
+        float: left;
+      }
+        .left-column h2:last-of-type, .left-column h3:last-child {
+          color: #000;
+        }
+      .right-column {
+        width: 75%;
+        float: right;
+        padding-top: 1em;
+      }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+    name: inverse
+    layout: true
+    class: center, middle, inverse
+    ---
+
+    # Risk for Engineers
+    ### Measuring the reduction of "_bad things_" in our future
+
+    ---
+
+    ## Problem:
+
+    --
+
+    ### I build security things, but I can't measure what difference it made.
+
+    ---
+
+    ## Here's a simple way to measure the difference you've made.
+
+    ---
+
+    ## Think of what security "thing" you work on.
+
+    --
+
+    ### Now think of a specific scenario that you're hoping it will prevent.
+
+    ---
+
+    ### Think of that scenario with a specific time frame (Days, Months, Years)
+
+    ---
+    name: final
+    layout: true
+    class: left, top, inverse
+    ---
+
+    ## Examples:
+
+    --
+
+    ### Data is stolen from our production storage buckets this quarter.
+
+    --
+
+    ### We discover malware on our CEO's laptop this year.
+
+    --
+
+    ### We are knocked offline because of an incident in the first two weeks after our product launches.
+
+    ---
+    template: inverse
+    layout: true
+    ---
+
+    ## Let's measure the likelihood of this scenario occurring.
+
+    ---
+
+    ### We will do this with:
+    ## A forecast.
+    ## 🌩️
+
+    ---
+
+    ## 1. Will this occur this year?
+
+    --
+
+    ## 2. What are the odds that it will?
+
+    ---
+
+    ## Don't be over concerned with being correct.
+    ### Try your best.
+
+    --
+
+    ### In fact, being "correct" might not matter.
+
+    --
+
+    ### We will cover that point later.
+
+    ---
+
+    ## Here's an example scenario.
+
+    ---
+    ## Scenario:
+    ### We are knocked offline because of an incident in the next year.
+    ---
+    ## Your forecast:
+    ### There is a .red[33% chance] that this will happen.
+
+    --
+
+    ##### (Yikes)
+
+    ---
+
+    ## Great! You've begun measurement.
+
+    --
+
+    ## Now go back to work!
+
+    ---
+
+    ### Try to fix it, or do whatever it is you do as a _security professional_.
+
+    ---
+
+    ### When you're done with your work mitigating something, measure again.
+
+    ---
+    ## Scenario:
+    ### We are knocked offline because of an incident in the next year.
+
+    --
+
+    ### Now consider your work: (_"And now we have implemented DDoS protection."_)
+    ---
+    ## Your forecast:
+    ### There is a .red[29% chance] (.green[-4%] reduction) that this will happen.
+
+    --
+
+    ### (Remember, your last forecast was .red[33%]!)
+
+    ---
+
+    ### You're done.
+
+    ---
+
+    ### You measured a .green[4%] reduction of the probability associated with this risk.
+
+    ---
+
+    ### You might be asking yourself...
+
+    --
+
+    ## That was too easy.
+
+    ---
+
+    ### You would be right. This was an estimation without _rigor_.
+
+
+    ---
+
+    ## This forecast has lots of problems.
+
+    ---
+
+    ### But now you understand the method.
+
+    ---
+
+    ## Now, let's make it more credible.
+
+    --
+
+    ### We can add several layers of rigor to this forecast.
+
+    --
+
+    ### This makes forecast metrics very useful and collaborative.
+
+    ---
+    template: final
+    layout: false
+    ## First: What is wrong?
+
+    --
+
+    ### People are highly biased with guesses. [Research](https://machinelearnings.co/why-are-we-so-confident-2c3151a6d5d0) agrees.
+
+    --
+
+    ### A [decade of research](https://www.amazon.com/Expert-Political-Judgment-Good-Know/dp/0691128715) shows experts to be hilariously weak at predictions.
+
+    --
+
+    ### Risk involves the probability of future events.
+
+    --
+
+    ### As "experts", we tend to be .red[worse] at predicting risks.
+
+    --
+
+    ### This fact is based on Nobel prize winning research.
+
+    --
+
+    ### These studies are repeated with [humorous results](https://en.wikipedia.org/wiki/Thinking,_Fast_and_Slow) in supporting research.
+
+    ---
+    template: inverse
+    layout: true
+    ---
+
+    ### This may be one of the reasons we are so bad at preventing breaches.
+
+    ---
+
+    ### Risk is inherently a probabilistic subject that demands prediction.
+
+    --
+
+    ### But these findings show that estimation of risk can be unreliable.
+
+    ---
+
+    ### Yet, we intend to reduce risks. We _depend_ on our ability to understand risk.
+
+    ---
+
+    ### So we are left as experts with a need to predict risk...
+
+    --
+
+    ### and science that suggests that [expert predictions are problematic](https://www.sas.upenn.edu/tetlock/publications).
+
+    ---
+
+    ## This issue is rampant in our industry.
+
+    ---
+
+    ### But there's hope!
+
+    ---
+
+    ## Other research suggests methods that _improve_ forecasting.
+
+    ---
+
+    ### Forecasting can be a rigorous process that defends against these errors.
+
+    ---
+
+    ## High risk industries rely on probabilistic approaches to risk.
+
+    --
+
+    ### [Space](https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/20120001369.pdf), [Nuclear](https://www.nrc.gov/about-nrc/regulatory/risk-informed/pra.html), [Oil](https://www.bsee.gov/sites/bsee.gov/files/interagency-agreements-mous-moas//nasa-bsee-iaa-1-28-16.pdf), [Environmental](https://www.epa.gov/risk/policy-use-probabilistic-analysis-risk-assessment-epa)
+
+    --
+
+    ### For some reason, we haven't appreciated these methods as they have.
+
+    ---
+
+    ## Forecasting fills in the gaps where "_We don't have data!_"
+
+    --
+
+    ### It turns out, this is not a valid excuse in any other industry.
+
+    ---
+
+    ## It's easy to mimic the habits of [effective forecasters](https://www.amazon.com/Superforecasting-Science-Prediction-Philip-Tetlock-ebook/dp/B00RKO6MS8).
+
+    --
+
+    ### They exist! They have been studied vigorously. For decades.
+
+    ---
+
+    ## These methods are easy to copy, with measurable results.
+
+    ---
+
+    ### This means rigorous forecasts can be useful enough for decisions about risk.
+
+    --
+
+    ### That .green[4%] value could be a reliable piece of data...
+
+    --
+
+    ### ...instead of feeling like a disposable guess.
+
+    ---
+
+    # How do we fix our forecast?
+
+    ---
+
+    ### The forecast needs _discipline_ to increase the value of the _forecaster_.
+
+    ---
+
+    ### Let's build that process.
+
+    ---
+
+    ## First, let's pick good scenarios.
+
+    ---
+
+    # An employee is infected with malware.
+    ### 💻️
+
+    ---
+
+    ## First:
+    ### It's not specific enough to forecast. Let's time box it to "this quarter".
+
+    ---
+
+    ## _An employee is infected with malware..._
+
+    --
+
+    # This quarter.
+
+    ---
+
+    ### Add specific threats, vector, asset, as makes sense.
+
+    ---
+
+    ## _An employee is infected with malware this quarter_
+
+    --
+
+    ### How about...
+
+    ---
+
+    ## A _C-Level executive_ is infected with malware this quarter.
+
+    ---
+
+    ### This could be easier to actually measure.
+
+    ---
+    ### More examples:
+
+    ---
+    ## A C-Level executive is infected with malware in the next quarter.
+    ---
+    ## An employee is infected by an email attachment, resulting in a .red[SEV1] incident this year.
+    ---
+    ## Compromised employees are discovered with malware as a result of next week's C&C hunt.
+    ---
+
+    ### These are better, but they don't have to be perfect.
+
+    --
+
+    ### Picking a good scenario is a lot like agreeing on a problem.
+
+    --
+
+    ## Nearly any future event can be forecasted.
+
+    ---
+
+    ### So long as it is concrete.
+
+    ---
+
+    ## Second: Gather supporting data.
+
+    ### Good scenarios can [break down](https://en.wikipedia.org/wiki/Fermi_problem) into data that resembles our problem.
+
+    ---
+
+    ## A forecast improves with any "nearby" data.
+    --
+
+    ###  Even just a _little bit_ helps. You might not have any. That's OK too.
+
+    ---
+
+    ## Consider a weather forecast.
+
+    --
+
+    ### Will it storm at our warehouse next week?
+
+    ---
+
+    ## A good scenario will attract measurement.
+
+    --
+
+    ### We would invest in radar, barometers, balloons, and sensors in nearby areas to reduce the uncertainty of a forecast.
+
+    ---
+
+    ### None of these _detect_ a future storm.
+
+    --
+
+    ### Every day, we still rely on a forecast.
+
+    --
+
+    ### This data merely supports a forecast.
+
+    --
+
+    ## It supports a _forecaster_ because the _forecaster_ wants it.
+
+    ---
+
+    ### And if we didn't have those sensors, we'd still need a forecast anyway.
+
+    ---
+
+    ### A [lack](http://www.sciencemag.org/news/2018/05/cooling-failure-threatens-noaa-s-newest-weather-satellite) [of](http://theconversation.com/how-a-lack-of-access-to-reliable-weather-data-is-hurting-african-farmers-80011) [data](https://www.gao.gov/highrisk/mitigating_gaps_in_weather_satellite_data/why_did_study) does not give a weather person the day off.
+
+    ---
+
+    ## We _have_ to express uncertainty
+
+    ## whether the data we want exists or not.
+
+    ---
+
+    ## Moving on... 
+
+    ---
+
+    ## Forecasting helps us become _less wrong_ over time.
+
+    ---
+
+    ## In fact, every forecast is wrong!
+
+    --
+
+    ### We just want to be as _less wrong_ as possible.
+
+    ---
+
+    ## Third: Train yourself, the forecaster.
+
+    --
+
+    ### Let's calibrate your sense of certainty.
+
+    --
+
+    ### You're going to get better at representing your certainty *as a number*.
+
+    ---
+    
+    ## Instead of saying...
+
+    --
+    
+    ### We're _hella_ breached right now dawg 🤣
+
+    --
+    
+    ## We can learn to say something like...
+
+    ---
+    
+    ## There is a .red[%47] chance we'll discover an intrusion from a week long hunt in production.
+
+    ---
+
+
+    ### This greatly reduces problems with forecasting bias.
+
+    ---
+
+    ### It helps us avoid overconfidence.
+
+    ---
+
+    ### It gives us the chance be _wrong_.
+
+    ---
+
+    ## It let's us discuss forecasts with others on common terms.
+
+    --
+
+    ### Like this...
+
+    ---
+
+    #### 👦: _Hey... Why was your forecast so high? I said .green[%12]._
+
+    --
+
+    #### 👧: _You know about the current misconfig right? I won't go lower than .red[47%]._
+
+    --
+
+    #### 👦: _Oh. Yeah, you're right. I will increase my forecast._
+
+    ---
+
+    ## Probabilistic forecasting can be learned _VERY QUICKLY_.
+
+    ---
+    ### You can quickly improve your own skills [here](http://confidence.success-equation.com), or [here](http://sethrylan.org/bayesian/calibrate.html).
+    .footnote[A paid version is [here](https://good-judgment.thinkific.com/courses/Superforecasting-Fundamentals)]
+    ---
+
+    ## That training isn't really that hard.
+    ### [Recent studies](https://hbr.org/2016/05/superforecasting-how-to-upgrade-your-companys-judgment) show that minimal training will drastically improve forecasting abilities.
+    ---
+    ## Did you practice?
+    ---
+    ## Cool!
+
+    --
+
+    ###  Your forecasts are now more reliable.
+    ---
+    ## We can improve forecasts even *more*.
+    ---
+    ## Fourth: We introduce a panel of forecasters.
+    ### <i class="fa fa-user" aria-hidden="true"></i> <i class="fa fa-user" aria-hidden="true"></i> <i class="fa fa-user" aria-hidden="true"></i> <i class="fa fa-user" aria-hidden="true"></i> <i class="fa fa-user" aria-hidden="true"></i>
+    ---
+    ## Diverse panels of forecasters reduce bias from a forecast.
+    ### You'd grab some friends, co-workers, experts, etc. Diverse is better.
+    ---
+    ## Then, we'd calibrate them, too.
+    ###<i class="fa fa-user" aria-hidden="true"></i> <i class="fa fa-user" aria-hidden="true"></i> <i class="fa fa-user" aria-hidden="true"></i> <i class="fa fa-user" aria-hidden="true"></i> <i class="fa fa-user" aria-hidden="true"></i>
+
+    --
+
+    ### Now we can average multiple forecasts into a single forecast:
+
+    --
+
+    ### <i class="fa fa-user" aria-hidden="true"></i>
+
+    --
+
+    ### And this number represents a consensus based estimate.
+
+    ---
+
+    ### This number is more stable and more resistant to individual bias.
+
+    ---
+    ### Groups seem to benefit greatly from combined forecasts.
+    ---
+    ## A fun example.
+
+    --
+
+    ### In 1907, a group of 787 people [correctly guessed the weight of an ox](https://arxiv.org/pdf/1410.3989.pdf).
+
+    --
+
+    .footnote[see [The Wisdom of Crowds](https://en.wikipedia.org/wiki/The_Wisdom_of_Crowds)]
+
+
+    ---
+
+    ## A recent example.
+
+    --
+
+    ### This method was used to create [teams of civilians](https://www.npr.org/sections/parallels/2014/04/02/297839429/-so-you-think-youre-smarter-than-a-cia-agent)...
+
+    --
+
+    ### ...who .red[beat] national security intelligence analysts...
+
+    --
+
+    ###...who had access to .red[confidential data].
+
+    ---
+
+    ### So, where are we?
+
+    --
+
+    ## Lets summarize.
+
+    ---
+
+    name: final
+    layout: true
+    class: left, top, inverse
+
+    ---
+
+    # We have forecasting tools.
+
+    --
+
+    ### Forecasts are improved with specific, time boxed scenarios.
+
+    --
+
+    ### Groups of diverse expert forecasts can smoothen out bias, like FUD and overconfidence.
+
+    --
+
+    ### We can be trained to calibrate ourselves. [Quickly](http://journal.sjdm.org/16/16511/jdm16511.pdf).
+
+    --
+
+    ### So...
+
+    --
+
+    ## We can create high value, rigorous forecasts about the probability of a risk.
+
+    ---
+    template: inverse
+    layout: true
+    ---
+
+    ## We're still not done.
+
+    --
+
+    ### This is *still not useful*.
+
+    --
+
+    ### We haven't measured that what you are working on _is valuable_
+
+    --
+
+    ## We'll get there!
+
+    ---
+
+    ### To understand how we measure risk, we first need to acknowledge how little we know about risk.
+
+    ---
+
+    ### Who says we can always predict the future?
+
+    ---
+
+    ### We can't, really.
+
+    ---
+
+    ### Things that haven't happened yet can't be measured.
+
+    ---
+
+    ## Probability is just a way of expressing belief.
+
+    ---
+
+    ## We are not omniscient.
+
+    ---
+
+    ### With these methods...
+
+    --
+
+    ## we're not pretending that we are predicting the future.
+
+    ---
+
+    ### Instead, we are measuring _what we know_.
+
+    ---
+
+    ## We want to become _less wrong_. 
+
+    --
+
+    ### So, we must measure how wrong we are.
+
+    --
+
+    ## Let's do that.
+
+    ---
+
+    ## Let's measure your work.
+
+    --
+
+    ### Assume you are improving the security of your AWS infrastructure.
+
+    --
+
+    ### Let's run forecasts every quarter while we mitigate this risk.
+
+    ---
+    template: final
+    layout: true
+    ---
+
+    ##Scenario: _"An attacker accesses destructive AWS IAM permissions in the next 365 days."_
+
+    --
+    #### 2016 - Q3: .red[25%]
+    First forecast. We already know our infra is a dumpster fire.
+    --
+
+    #### 2016 - Q4: .red[23%]
+    Minor progress. We have limited the destructive capability of keys in production.
+    --
+
+    #### 2017 - Q1: .red[16%]
+    We added multifactor protection to keys used by engineers.
+    --
+
+    #### 2017 - Q2: .green[10%]
+    We took keys out of source code and use roles now.
+    --
+
+    ## An increase in confidence against this risk of .green[15%].
+
+    ---
+
+    ## The direction of forecasts matter.
+
+    --
+
+    ### We can't just fudge numbers. The threat of being _very wrong_ matters too.
+
+    --
+
+    ## If our efforts mitigate risk... 
+    
+    --
+    
+    ### We should also believe we influenced the odds.
+
+    --
+
+    ## In the event that _we end up being wrong_...
+    
+    ---
+    template: inverse
+    layout: true
+    ---
+    
+    ## We are on the hook.
+
+    --
+
+    ### We re-evaluate the facts.
+
+    --
+
+    ### We surface opinions of people who held opposing views.
+
+    --
+
+    ### We share retrospectives and learn our lessons.
+
+    ---
+
+    ## There is opportunity with these methods.
+
+    ---
+    template: inverse
+    layout: true
+
+    ---
+
+    ## We can measure that we're getting better at security.
+
+    ---
+
+    ### I hope I've encouraged you to explore forecasting.
+
+    ---
+
+    ### It is not a silver bullet.
+
+    ---
+
+    ## It is a rarely discussed topic in security.
+
+    --
+
+    ### Which is surprising, as we are entirely focused on avoiding future events.
+
+    ---
+
+    ### Forecasting demands better data, collaboration, and well scoped problems.
+
+    ---
+
+    ### I believe that forecasting practices will make things better.
+
+    ---
+
+    ## Good luck!
+
+    .footnote[Read more:  [Risk Measurement](https://magoo.github.io/risk-measurement/) and [scrty.io](https://scrty.io)]
+
+    </textarea>
+        <script src="https://remarkjs.com/downloads/remark-latest.min.js">
+    <script>
+      var hljs = remark.highlighter.engine;
+    </script>
+    <script src="remark.language.js"></script>
+    <script>
+      var slideshow = remark.create({
+          highlightStyle: 'monokai',
+          highlightLanguage: 'remark',
+          highlightLines: true
+        }) ;
+    </script>
+    <script>
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-44561333-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script');
+        ga.src = 'https://ssl.google-analytics.com/ga.js';
+        var s = document.scripts[0];
+        s.parentNode.insertBefore(ga, s);
+      }());
+    </script>
+  </body>
+</html>
